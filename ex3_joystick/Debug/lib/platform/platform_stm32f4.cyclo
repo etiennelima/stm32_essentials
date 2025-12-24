@@ -1,0 +1,5 @@
+../lib/platform/platform_stm32f4.c:16:6:_platform_gpio_write	1
+../lib/platform/platform_stm32f4.c:23:9:_platform_gpio_read	1
+../lib/platform/platform_stm32f4.c:30:6:_platform_pwm_control	1
+../lib/platform/platform_stm32f4.c:34:6:_platform_delay_ms	1
+../lib/platform/platform_stm32f4.c:38:6:_platform_delay_us	2

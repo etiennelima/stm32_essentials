@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;dma_structured_uart/lib/uart_ex1.h&apos; to &apos;uart_ex2.h&apos;" description="Rename resource &apos;uart_ex1.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="lib/uart_ex1.h" name="uart_ex2.h" stamp="1766411502018" updateReferences="true"/>
+</session>

@@ -1,0 +1,51 @@
+/*
+ * RadioPinFunctions.c
+ *
+ *  Created on: Jun 28, 2023
+ *      Author: pablo-jean
+ */
+
+#include <stm32f4xx.h>
+#include "main.h"
+#include "spi.h"
+#include "gpio.h"
+
+/* ------------------------------------------------------------------------- */
+void nrf24_setupPins()
+{
+	// nothing to do
+}
+/* ------------------------------------------------------------------------- */
+void nrf24_ce_digitalWrite(uint8_t state)
+{
+	HAL_GPIO_WritePin(nRF_CE_GPIO_Port, nRF_CE_Pin, state);
+}
+/* ------------------------------------------------------------------------- */
+void nrf24_csn_digitalWrite(uint8_t state)
+{
+	HAL_GPIO_WritePin(nRF_SS_GPIO_Port, nRF_SS_Pin, state);
+}
+/* ------------------------------------------------------------------------- */
+void nrf24_sck_digitalWrite(uint8_t state)
+{
+
+}
+/* ------------------------------------------------------------------------- */
+void nrf24_mosi_digitalWrite(uint8_t state)
+{
+
+}
+/* ------------------------------------------------------------------------- */
+uint8_t nrf24_miso_digitalRead()
+{
+    return 0;
+}
+/* ------------------------------------------------------------------------- */
+uint8_t nrf24_spi_transfer(uint8_t data){
+	uint8_t rx = 0;
+
+	HAL_SPI_TransmitReceive(&hspi2, &data, &rx, 1, 100);
+
+	return rx;
+}
+/* ------------------------------------------------------------------------- */

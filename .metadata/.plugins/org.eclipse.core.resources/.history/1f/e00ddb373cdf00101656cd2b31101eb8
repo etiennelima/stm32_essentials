@@ -1,0 +1,57 @@
+/*
+ * uart_ex2.c
+ *
+ *  Created on: Dec 22, 2025
+ *      Author: etienne.lima
+ */
+
+
+#include "uart_ex1.h"
+
+
+/**
+ * Privates
+ *
+ * */
+
+/**
+ *
+ * Publics
+ * */
+
+uint8_t uart_calc_checksum (packet_u *pck){
+	uint8_t u8ChkSum, i;
+
+	u8ChkSum = 0;
+	for(i = 0; i < (sizeof(packet_u) - 2); i++){
+		u8ChkSum += pck-> _raw[i];
+	}
+
+	return u8ChkSum;
+}
+
+uint8_t _uart_verify_packet (uart_control_t *control){
+	packet_u *pck;
+	uint8_t u8ChkSum;
+
+	pck = control->uPacketRec;
+	if(pck->u8head != UART_HEAD){
+		control->eState = STATE_PACKET_FAILED;
+		return UART_FAIL;
+	}
+	else if(pck->u8_tail != UART_TAIL){
+		control->eState = STATE_PACKET_FAILED;
+		return UART_FAIL;
+	}
+
+	u8ChkSum = _uart_calc_checksum(pck);
+	if(u8ChkSum != pck->u8checksum){
+		control->eState = STATE_PACKET_FAILED;
+		return UART_FAIL;
+	}
+
+	memcpy(control->u8data, pck->u8data, sizeof(pck->u8data));
+	control->eState = STATE_RECEIVED;
+
+	return UART_OK;
+}

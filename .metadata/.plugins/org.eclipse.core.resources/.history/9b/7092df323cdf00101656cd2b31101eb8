@@ -1,0 +1,52 @@
+/*
+ * uart_ex1.h
+ *
+ *  Created on: Dec 22, 2025
+ *      Author: etienne.lima
+ */
+
+#ifndef UART_EX1_H_
+#define UART_EX1_H_
+
+/*
+ * Includes
+ * */
+
+#include <stdio.h>
+#include <string.h>
+
+#include <stm32f4xx.h>
+
+/**
+ * Packet: tamanho n
+ *
+ * 1 Step --> seta UART em DMA para 1 byte
+ * 1 byte --> tamanho do pacote a ser enviado
+ *
+ *
+ * 2 Step --> seta UART em DMA para n bytes (valor oriundo 1 step)
+ * -- > receber este vetor contendo a informação
+ *
+ *
+ * */
+
+
+/*
+ * Tyoedefs
+ * */
+
+typedef enum{
+	STATE_START,
+	STATE_WAITING_LEN,
+	STATE_WAITING_PACKET,
+	STATE_RECEIVE_PACKET,
+	STATE_RECEIVED,
+	STATE_PACKET_FAILED,
+
+	STATE_SEND_LEN,
+	STATE_WAITING_OK,
+	STATE_SEND_PACKET
+
+}uart_state_e;
+
+#endif /* UART_EX1_H_ */

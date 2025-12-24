@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ex3_joystick/ex2_botoes.ioc&apos; to &apos;ex3_joystick.ioc&apos;" description="Rename resource &apos;ex2_botoes.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ex2_botoes.ioc" name="ex3_joystick.ioc" stamp="1766054908672" updateReferences="true"/>
+</session>

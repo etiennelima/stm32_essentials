@@ -1,0 +1,36 @@
+13:45:17 **** Incremental Build of configuration Debug for project dma_structured_uart ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/etienne.lima/programacao/pasta_projeto/STM32F411/dma_structured_uart/lib" -I"/home/etienne.lima/programacao/pasta_projeto/STM32F411/dma_structured_uart/lib/lcd" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:171:23: warning: unused variable 'i' [-Wunused-variable]
+  171 |         uint32_t sum, i;
+      |                       ^
+../Core/Src/main.c:171:18: warning: unused variable 'sum' [-Wunused-variable]
+  171 |         uint32_t sum, i;
+      |                  ^~~
+../Core/Src/main.c:169:24: warning: variable 'BtnBefore' set but not used [-Wunused-but-set-variable]
+  169 |         adc_btn_e Btn, BtnBefore;
+      |                        ^~~~~~~~~
+../Core/Src/main.c:168:17: warning: unused variable 'send' [-Wunused-variable]
+  168 |         uint8_t send[2];
+      |                 ^~~~
+../Core/Src/main.c:167:18: warning: unused variable 'adcVal' [-Wunused-variable]
+  167 |         uint16_t adcVal;
+      |                  ^~~~~~
+../Core/Src/main.c:165:15: warning: unused variable 'voltage' [-Wunused-variable]
+  165 |         float voltage;
+      |               ^~~~~~~
+arm-none-eabi-gcc -o "dma_structured_uart.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/etienne.lima/programacao/pasta_projeto/STM32F411/dma_structured_uart/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dma_structured_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dma_structured_uart.elf
+ 
+arm-none-eabi-size  dma_structured_uart.elf 
+arm-none-eabi-objdump -h -S dma_structured_uart.elf  > "dma_structured_uart.list"
+   text	   data	    bss	    dec	    hex	filename
+  22404	    152	   2392	  24948	   6174	dma_structured_uart.elf
+Finished building: default.size.stdout
+ 
+Finished building: dma_structured_uart.list
+ 
+
+13:45:18 Build Finished. 0 errors, 6 warnings. (took 901ms)
+

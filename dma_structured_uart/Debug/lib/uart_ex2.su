@@ -1,0 +1,8 @@
+../lib/uart_ex2.c:22:9:_uart_calc_checksum	24	static
+../lib/uart_ex2.c:33:9:_uart_verify_packet	24	static
+../lib/uart_ex2.c:59:6:uart_start	16	static
+../lib/uart_ex2.c:66:6:uart_mac_state	24	static
+../lib/uart_ex2.c:122:6:uart_send_packet	24	static
+../lib/uart_ex2.c:135:6:uart_rx_event	16	static
+../lib/uart_ex2.c:159:6:uart_tx_event	16	static
+../lib/uart_ex2.c:172:13:uart_received_callback	24	static

@@ -1,0 +1,8 @@
+../lib/lcdDisplay.c:11:6:delay	24	static
+../lib/lcdDisplay.c:22:6:send_to_lcd	24	static
+../lib/lcdDisplay.c:42:6:lcd_send_cmd	24	static
+../lib/lcdDisplay.c:55:6:lcd_send_data	24	static
+../lib/lcdDisplay.c:68:6:lcd_clear	16	static
+../lib/lcdDisplay.c:74:6:lcd_put_cur	24	static
+../lib/lcdDisplay.c:99:6:lcd_init	24	static
+../lib/lcdDisplay.c:128:6:lcd_send_string	16	static

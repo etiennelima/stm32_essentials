@@ -1,0 +1,7 @@
+../lib/nrf24L01_plus/RadioPinFunctions.c:14:6:nrf24_setupPins	1
+../lib/nrf24L01_plus/RadioPinFunctions.c:19:6:nrf24_ce_digitalWrite	1
+../lib/nrf24L01_plus/RadioPinFunctions.c:24:6:nrf24_csn_digitalWrite	1
+../lib/nrf24L01_plus/RadioPinFunctions.c:29:6:nrf24_sck_digitalWrite	1
+../lib/nrf24L01_plus/RadioPinFunctions.c:34:6:nrf24_mosi_digitalWrite	1
+../lib/nrf24L01_plus/RadioPinFunctions.c:39:9:nrf24_miso_digitalRead	1
+../lib/nrf24L01_plus/RadioPinFunctions.c:44:9:nrf24_spi_transfer	1
